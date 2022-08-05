@@ -1,5 +1,7 @@
 # DigitalBooking
 
+✈Enlace habilitado desde 14:00hs a 18:00hs  https://lnkd.in/dTVd8A8K ✈
+
 ## Resumen
 
 El proyecto consiste en el desarrollo web de una app completa desde principio a fin aplicando métodos ágiles y colaborativos en cada una de las etapas, evaluando tanto lo técnico como las habilidades blandas en cada daily , weekly , retro y sprint. 
