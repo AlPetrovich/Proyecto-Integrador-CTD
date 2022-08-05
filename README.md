@@ -17,6 +17,31 @@ Nuestro objetivo principal , además de desarrollar una aplicación funcional e 
 - [Sofia Rotondi](https://www.linkedin.com/in/sofia-rotondi/)
 - [Juan Manuel Mansilla Quintana](https://www.linkedin.com/in/juanmans/)
 
+
+## Tecnologias Utilizadas
+
+Los servicios / herramientas que hemos empleado para realizar este proyecto son: 
+
+- Gestión del proyecto: GitLab, Discord
+
+- Desarrollo del proyecto:
+
+  - IDEs: Visual Studio Code, Intellij IDEA
+
+  - Sistema de control de versiones: Git / Gitlab
+
+  - Simulación / Virtualización: AWS
+
+Las Tecnologías utilizadas para el desarrollo del sitio fueron:
+
+- Front-End: JavaScript, HTML, CSS, ReactJS, Axios, React Router V6, jwt-decode, react-calendar, react-s3, react-share, react-validation, validator, sweetalert2, react-image-gallery.
+- Back-End: Java, Spring, Hibernate,APIs,Rest, Json, Maven, Apache, Tomcat.
+
+- Base de datos: MySQL.
+- Infraestructura: EC2, S3, RDS, Elastic Beanstalk.
+- Testing: Postman, Jest, Selenium, Junit, Mockito, pa11y, Lighthouse.
+
+
 ## Metodologia de Trabajo
 
 Para llevar a cabo este proyecto tomamos las herramientas que nos brinda la metodología ágil de trabajo SCRUM. Se trabajó con guía de una Scrum Master, una Product Owner, un cliente y Tech Leaders.
@@ -52,29 +77,6 @@ Acerca del equipo
 Como equipo nos destacamos en la colaboración, la organización y la responsabilidad para cumplir con las metas esperadas. Constantemente nos interesa mejorar como profesionales y seguir aprendiendo herramientas nuevas para agregar valor a nuestro trabajo. 
 Tenemos unos puntos que podríamos mejorar, como por ejemplo dejar de trabajar tanto por la madrugada para poder tener un horario sano de trabajo y llevar mejor una bitácora diaria para documentar nuestro proceso. 
 Afortunadamente no tuvimos grandes conflictos en el grupo y siempre pudimos comunicarnos a tiempo los problemas para solucionar los obstáculos que surgieron, como programar las reuniones en un horario conveniente para todos.
-
-## Tecnologias Utilizadas
-
-Los servicios / herramientas que hemos empleado para realizar este proyecto son: 
-
-- Gestión del proyecto: GitLab, Discord
-
-- Desarrollo del proyecto:
-
-  - IDEs: Visual Studio Code, Intellij IDEA
-
-  - Sistema de control de versiones: Git / Gitlab
-
-  - Simulación / Virtualización: AWS
-
-Las Tecnologías utilizadas para el desarrollo del sitio fueron:
-
-- Front-End: JavaScript, HTML, CSS, ReactJS, Axios, React Router V6, jwt-decode, react-calendar, react-s3, react-share, react-validation, validator, sweetalert2, react-image-gallery.
-Back-End: Java, Spring, Hibernate,APIs,Rest, Json, Maven, Apache, Tomcat.
-
-- Base de datos: MySQL.
-- Infraestructura: EC2, S3, RDS, Elastic Beanstalk.
-- Testing: Postman, Jest, Selenium, Junit, Mockito, pa11y, Lighthouse.
 
 ## Documentación tecnica del proyecto
 
