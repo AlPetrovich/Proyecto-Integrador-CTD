@@ -1,1 +1,1 @@
-export const apiURL = "http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api"
+export const apiURL = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api"

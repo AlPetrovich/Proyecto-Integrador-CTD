@@ -13,6 +13,8 @@ import Input from "react-validation/build/input";
 import { isEmail } from "validator";
 import CheckButton from "react-validation/build/button";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 const Booking = (props) => {
   const { idProduct } = useParams();
   const [isFirstRender, setFirstRender] = useState(true);
@@ -84,7 +86,7 @@ const Booking = (props) => {
     if (isFirstRender) {
       if (user) {
         fetch(
-          `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/product/${idProduct}`
+          `${url}/product/${idProduct}`
         )
           .then((response) => {
             if (!response.ok) throw Error(response.status);
@@ -221,7 +223,7 @@ const Booking = (props) => {
       redirect: "follow",
     };
     fetch(
-      "http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/reservation/create",
+      `${url}/reservation/create`,
       requestOptions
     )
       .then((response) => response.text())

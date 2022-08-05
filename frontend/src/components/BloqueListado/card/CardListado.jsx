@@ -5,6 +5,8 @@ import AuthService from "../../../services/auth.service";
 import jwt from "jwt-decode";
 import Swal from "sweetalert2";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 const CardListado = (props) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(
@@ -106,7 +108,7 @@ const CardListado = (props) => {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/delete/${user.email}/${data.id}`,
+      `${url}/user/favorite/delete/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -129,7 +131,7 @@ const CardListado = (props) => {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/create/${user.email}/${data.id}`,
+      `${url}/user/favorite/create/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -296,15 +298,12 @@ const CardListado = (props) => {
                       classFeature = "fa-solid fa-dumbbell";
                       break;
                     case 9:
-                      classFeature = "fa-solid fa-utensils";
-                      break;
-                    case 10:
                       classFeature = "fa-solid fa-car";
                       break;
-                    case 11:
+                    case 10:
                       classFeature = "fa-solid fa-mug-saucer";
                       break;
-                    case 12:
+                    case 11:
                       classFeature = "fa-brands fa-accessible-icon";
                       break;
                     default:

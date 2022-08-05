@@ -5,7 +5,7 @@ back_job:
   stage: cicd
   only:
     refs:
-      - newTesting
+      - main
   trigger:
     include:
       - local: '.gitlab-ci-back.yml'
@@ -15,7 +15,7 @@ front_job:
   stage: cicd
   only:
     refs:
-      - newTesting
+      - main
   trigger:
     include:
       - local: '.gitlab-ci-front.yml'

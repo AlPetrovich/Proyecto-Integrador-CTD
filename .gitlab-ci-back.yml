@@ -4,9 +4,10 @@ stages:
 
 pakage_job:
   stage: package
+  image: maven:latest
   only :
     refs:
-      - newTesting
+      - main
   script:
     - echo "Maven package "
     - "cd backend" #consultar
@@ -20,8 +21,7 @@ deploy_job:
   image: python:latest
   only :
     refs:
-      - newTesting
-
+      - main
   script:
     - pip install awscli
     - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/auth/";
+const API_URL = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api/auth/";
 
 class AuthService {
 

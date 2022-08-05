@@ -4,6 +4,8 @@ import jwt from "jwt-decode";
 import Swal from "sweetalert2";
 import AuthService from "../../services/auth.service";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 const FavouriteCard = (props) => {
   const [showMore, setShowMore] = useState(false);
   const [data, setData] = useState(props.cardInfo) || [{}];
@@ -100,7 +102,7 @@ const FavouriteCard = (props) => {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/delete/${user.email}/${data.id}`,
+      `${url}/user/favorite/delete/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -123,7 +125,7 @@ const FavouriteCard = (props) => {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/create/${user.email}/${data.id}`,
+      `${url}/user/favorite/create/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())

@@ -25,6 +25,7 @@ public class Product {
     private String title;
     @Column(columnDefinition="TEXT")
     private String description;
+    @Column(columnDefinition="TEXT")
     private String introduction;
     private String slogan;
     private String address;

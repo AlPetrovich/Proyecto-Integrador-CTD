@@ -25,7 +25,7 @@ const ImagesDisplay = (props) => {
                         {
                             imgList.map((img,index)=>{
                                 if(index === imgList.length - 1){
-                                return <div className="gallery-last-image-container"><span className="display-img-detail-button" onClick={props.displayGallery}><div className="show-more-text"> <span>Ver más</span></div></span><img src={img} alt={"img"+index} key={index + 'img'}></img></div>
+                                return <div className="gallery-last-image-container" key={index + 'img'}><span className="display-img-detail-button" onClick={props.displayGallery}><div className="show-more-text"> <span>Ver más</span></div></span><img src={img} alt={"img"+index} key={index + 'img'}></img></div>
                                 }
                                 return <img src={img} className="img" alt={"img"+index} key={index + 'img'}/>
                             })

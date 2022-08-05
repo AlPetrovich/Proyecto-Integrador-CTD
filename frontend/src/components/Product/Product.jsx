@@ -16,6 +16,8 @@ import {
 import jwt from "jwt-decode";
 import Swal from "sweetalert2";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 export default function Product(props) {
   //Traigo el id del producto selecionado
   const [userFav, setUserFav] = useState(
@@ -74,7 +76,7 @@ export default function Product(props) {
     if (!data) {
       window.scrollTo(0, 0);
       fetch(
-        `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/product/${idProduct}`
+        `${url}/product/${idProduct}`
       )
         .then((response) => {
           if (!response.ok) throw Error(response.status);
@@ -94,7 +96,7 @@ export default function Product(props) {
     }
     if (user) {
       fetch(
-        `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorites/${userFav.email}`
+        `${url}/user/favorites/${userFav.email}`
       )
         .then((response) => {
           if (!response.ok) throw Error(response.status);
@@ -139,7 +141,7 @@ export default function Product(props) {
   }
 
   const getDisabledDate = () => {
-    return disabledDates.map((e) => {
+    return disabledDates?.map((e) => {
       return getDates(
         new Date(addDays(e.checkIn, 1)),
         new Date(addDays(e.checkOut, 1))
@@ -175,7 +177,7 @@ export default function Product(props) {
   };
   const simplifyArray = (arr) => {
     let disabledDatesNewArr = [];
-    arr.forEach((element) => {
+    arr?.forEach((element) => {
       disabledDatesNewArr = disabledDatesNewArr.concat(element);
     });
     return disabledDatesNewArr;
@@ -284,7 +286,7 @@ export default function Product(props) {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/delete/${user.email}/${data.id}`,
+      `${url}/user/favorite/delete/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -306,7 +308,7 @@ export default function Product(props) {
       redirect: "follow",
     };
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorite/create/${user.email}/${data.id}`,
+      `${url}/user/favorite/create/${user.email}/${data.id}`,
       requestOptions
     )
       .then((response) => response.text())

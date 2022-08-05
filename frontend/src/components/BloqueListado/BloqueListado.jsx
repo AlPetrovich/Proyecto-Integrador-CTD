@@ -6,6 +6,8 @@ import NewMap from "../Map/NewMap";
 import AuthService from "../../services/auth.service";
 import { useRef } from "react";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 const BloqueListado = (props) => {
   const [randomList, setRandomList] = useState([]);
   const [category, setCategory] = useState("");
@@ -23,7 +25,7 @@ const BloqueListado = (props) => {
 
   const getNodoApi = () => {
     var nodoApi = new URL(
-      "http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/product/findByAll"
+      url+"/product/findByAll"
     );
     if (pag) {
       nodoApi.searchParams.append("pag", pag);
@@ -53,7 +55,7 @@ const BloqueListado = (props) => {
 
     setCategory(props.categoryType);
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/categories/findAll`
+      `${url}/categories/findAll`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);
@@ -67,7 +69,7 @@ const BloqueListado = (props) => {
 
       });
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/cities/findAll`
+      `${url}/cities/findAll`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);
@@ -87,7 +89,7 @@ const BloqueListado = (props) => {
   }, [optionsActive])
   const updateFavourites = () => {
     return fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorites/${user.email}`
+      `${url}/user/favorites/${user.email}`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);

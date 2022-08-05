@@ -6,6 +6,8 @@ import jwt from "jwt-decode";
 import MapWithMarkers from "./Map/MapWithMarkers";
 import FavouriteCard from "./FavouriteCard";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 export default function Favourites(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(true);
@@ -16,7 +18,7 @@ export default function Favourites(props) {
   const [click, setClick] = useState(false);
   useEffect(() => {
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/user/favorites/${user.email}`
+      `${url}/user/favorites/${user.email}`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);

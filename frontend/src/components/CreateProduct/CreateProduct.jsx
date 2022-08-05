@@ -10,6 +10,8 @@ import Textarea from "react-validation/build/textarea";
 import CheckButton from "react-validation/build/button";
 import Swal from "sweetalert2";
 
+const url = "http://apidigitalbooking-env.eba-t7nfsxa7.us-east-1.elasticbeanstalk.com/api";
+
 export default function CreateProduct() {
   const navigate = useNavigate();
   const [features, setFeatures] = useState([]);
@@ -34,9 +36,7 @@ export default function CreateProduct() {
   const [inputPolicesCancellation, setInputPolicesCancellation] = useState();
 
   useEffect(() => {
-    fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/categories/findAll`
-    )
+    fetch(`${url}/categories/findAll`)
       .then((response) => {
         if (!response.ok) throw Error(response.status);
         return response;
@@ -49,7 +49,7 @@ export default function CreateProduct() {
         setIsLoading(true);
       });
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/cities/findAll`
+      `${url}/cities/findAll`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);
@@ -63,7 +63,7 @@ export default function CreateProduct() {
         setIsLoading(true);
       });
     fetch(
-      `http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/feature/findAll`
+      `${url}/feature/findAll`
     )
       .then((response) => {
         if (!response.ok) throw Error(response.status);
@@ -106,7 +106,7 @@ export default function CreateProduct() {
         {
           rules: inputPolicesRules,
           health: inputPolicesHealth,
-          /*cancellation: inputPolicesCancellation*/
+          cancellation: inputPolicesCancellation
         },
       ],
     });
@@ -117,10 +117,7 @@ export default function CreateProduct() {
       redirect: "follow",
     };
     try {
-      const res = await fetch(
-        "http://grupo4bookingdigital-env.eba-gkwgucam.us-east-2.elasticbeanstalk.com/api/product/create",
-        requestOptions
-      );
+      const res = await fetch(`${url}/product/create`,requestOptions);
       return res.json();
     } catch (e) {
       

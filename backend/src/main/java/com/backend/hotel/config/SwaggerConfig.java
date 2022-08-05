@@ -41,8 +41,8 @@ public class SwaggerConfig {
                 "Digital Booking",
                 "Digital Booking API Description",
                 "1.0",
-                "http://digitalBooking.com/terms",
-                new Contact("Alexis", "https://grupo4.com", "apis@gmail.com"),
+                "**",
+                new Contact("Grupo4-Camada1-DigitalHouse", "https://gitlab.com/otroSalo/digitalbooking/-/tree/main/backend", "salo_smc@hotmail.com"),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()
